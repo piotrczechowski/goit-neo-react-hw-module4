@@ -1,13 +1,14 @@
 import React from "react";
+import styles from "./ImageGallery.module.css";
 import ImageCard from "./ImageCard";
 
 const ImageGallery = ({ images, onImageClick }) => {
-  if (!images || images.legth === 0) {
+  if (!images || images.length === 0) {
     return null;
   }
+
   return (
-    <ul>
-      {" "}
+    <ul className={styles.gallery}>
       {images.map((image) => (
         <li key={image.id}>
           <ImageCard image={image} onImageClick={onImageClick} />
