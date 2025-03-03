@@ -97,13 +97,11 @@ const App = () => {
 
       {images.length > 0 && !error && <LoadMoreBtn onClick={handleLoadMore} />}
 
-      {selectedImage && (
-        <ImageModal
-          isOpen={showModal}
-          onClose={closeModal}
-          image={selectedImage}
-        />
-      )}
+      <ImageModal
+        isOpen={showModal}
+        onClose={closeModal}
+        image={selectedImage}
+      />
     </div>
   );
 };
